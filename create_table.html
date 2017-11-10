@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Create table with JS</title>
+    <style>
+        td { border: 1px solid red;}
+        th { border: 1px solid blue;}
+    </style>
+    <script type="text/javascript">
+        window.onload = function() {
+            var table = document.createElement('table');
+            /**/
+            var rowhead=document.createElement('tr');
+            table.appendChild(rowhead);
+            for (var i = 0 ; i < 10; i++) {
+                var colhead = document.createElement('th');
+                colhead.innerText = i + 'й';
+                rowhead.appendChild(colhead);
+            }
+            /**/
+            for (var j = 0 ; j < 10; j++) {
+
+                var row = document.createElement('tr');
+                table.appendChild(row);
+                for (var i = 0 ; i < 10; i++) {
+                    var col = document.createElement('td');
+                    col.innerText = '-' + i + '-';
+                    row.appendChild(col);
+                }
+            }
+            document.body.appendChild(table);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
